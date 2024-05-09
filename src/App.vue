@@ -3,6 +3,4 @@
 </template>
 
 <style>
-#app {
-}
 </style>

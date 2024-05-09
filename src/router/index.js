@@ -1,11 +1,12 @@
 import { createRouter, createWebHistory } from 'vue-router'
-import NavigationInfoView from "@/views/NavigationInfoView.vue";
+import NavigationInfoView from "@/views/HeaderInfo.vue";
+import ANRU from "@/views/ANRU.vue";
 
 const routes = [
   {
     path: '/',
-    name: 'NavInfo',
-    component: NavigationInfoView
+    name: 'Anru',
+    component: ANRU
   },
 
 
