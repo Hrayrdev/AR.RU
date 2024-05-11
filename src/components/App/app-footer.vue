@@ -1,49 +1,52 @@
 <template>
 
-  <div class="footer">
-    <div class="footer__info">
-      <div class="footer__info-about-us">
-        <div class="footer__info-about-us-logo">
-          <img class="img-auto" src="@/assets/footer/logo.png" alt="">
+  <div class="app-footer">
+    <div class="app-footer__info">
+      <div class="app-footer__info-about-us">
+        <div class="app-footer__info-about-us-logo">
+          <img class="img-auto" src="@/assets/app-footer/logo.png" alt="">
         </div>
-        <div class="footer__info-about-us-company">© 2006-2022 АН "PROНЕДВИЖИМОСТЬ"</div>
+        <div class="app-footer__info-about-us-company">© 2006-2022 АН "PROНЕДВИЖИМОСТЬ"</div>
+
+        <div class="app-footer__info-links">
+          <div class="site-info">Правила оплаты</div>
+          <div class="site-info">Правила пользования сайтом</div>
+          <div class="site-info">Политика конфиденциальности</div>
+        </div>
       </div>
-      <div class="footer__info-links-and-contacts">
+
+      <div class="app-footer__info-links-and-contacts">
         <div class="grey-text mb">Пишите</div>
         <div class="df">
-          <div class="footer__info-links">
-            <div class="site-info">Правила оплаты</div>
-            <div class="site-info">Правила пользования сайтом</div>
-            <div class="site-info">Политика конфиденциальности</div>
-          </div>
-          <div class="footer__info-contacts">
+
+          <div class="app-footer__info-contacts">
             <div class="mr">
               <div class="social-media-contact">
-                <div><img class="img-auto" src="@/assets/footer/mail.png" alt=""></div>
+                <div><img class="img-auto" src="@/assets/app-footer/mail.png" alt=""></div>
                 <div>Эл.почта</div>
               </div>
               <div class="social-media-contact">
-                <div><img class="img-auto" src="@/assets/footer/telegram.png" alt=""></div>
+                <div><img class="img-auto" src="@/assets/app-footer/telegram.png" alt=""></div>
                 <div>Telegram</div>
               </div>
             </div>
             <div>
               <div class="social-media-contact">
-                <div><img class="img-auto" src="../assets/footer/whatsapp.png" alt=""></div>
+                <div><img class="img-auto" src="@/assets/app-footer/whatsapp.png" alt=""></div>
                 <div>Whatsapp</div>
               </div>
               <div class="social-media-contact">
-                <div><img class="img-auto" src="../assets/footer/viber.png" alt=""></div>
+                <div><img class="img-auto" src="@/assets/app-footer/viber.png" alt=""></div>
                 <div>Viber</div>
               </div>
             </div>
           </div>
         </div>
       </div>
-      <div class="footer__info-phone-number">
+      <div class="app-footer__info-phone-number">
         <div class="grey-text">Звоните</div>
         <div class="df">
-          <div class="mr"><img src="@/assets/footer/phone.png" class="img-auto" alt=""></div>
+          <div class="mr"><img src="@/assets/app-footer/phone.png" class="img-auto" alt=""></div>
           <div>+7 (495) 642-52-89</div>
         </div>
       </div>
@@ -66,9 +69,8 @@ $c-black: #030303;
   font-family: 'Semi Bold';
 }
 
-.footer {
-
-    padding: 40px;
+.app-footer {
+  padding: 20px 0 20px 0;
 
   &__info {
     display: grid;
@@ -92,6 +94,7 @@ $c-black: #030303;
     }
 
     &-links-and-contacts {
+      font-size: 14px;
       display: flex;
       flex-direction: column;
       align-items: center;
@@ -110,7 +113,8 @@ $c-black: #030303;
       display: flex;
     }
 
-    &-phone-number{
+    &-phone-number {
+      font-size: 14px;
       display: flex;
       flex-direction: column;
       align-items: center;

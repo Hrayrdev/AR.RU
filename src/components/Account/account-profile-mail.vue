@@ -1,11 +1,11 @@
 <template>
-  <div class="update-account-mail">
+  <div class="account-profile-mail">
     <div class="mail-status  ">Не подтверждена</div>
     <div class="mail-info mb">Электронная почта</div>
     <div class="mail mb ">
       <input class="mail-input" placeholder="user@yandex.ru">
     </div>
-    <div class="update-mail-button">Отправить ссылку для подтвеждения</div>
+    <div class="account-profile-mail-button">Отправить ссылку для подтвеждения</div>
   </div>
 </template>
 
@@ -15,11 +15,9 @@
 <style scoped lang="scss">
 $c-black: #030303;
 
-.update-account-mail {
+.account-profile-mail {
   padding: 12px;
   border-radius: 10px;
-  border: 1px solid white;
-  box-shadow: 5px 5px 5px 5px #d5d2d2;
 }
 
 .mail-status {
@@ -31,6 +29,7 @@ $c-black: #030303;
 }
 
 .mail-info {
+  font-size: 14px;
   margin-top: 10px;
   color: rgba($c-black, .6);
 }
@@ -45,8 +44,8 @@ $c-black: #030303;
   border-radius: 10px;
 }
 
-.update-mail-button {
+.account-profile-mail-button {
   color: #FF541E;
-  font-size: 13px;
+  font-size: 14px;
 }
 </style>

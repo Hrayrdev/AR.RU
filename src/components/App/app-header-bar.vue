@@ -1,20 +1,20 @@
 <template>
-  <div class="header-bar">
-    <div class="header-bar__panel">
-      <div class="header-bar__panel-logo-links">
-        <div class="header-bar__panel-logo">
-          <img class="header-bar__image" src="../assets/header-bar/logo.png" alt="">
+  <div class="app-header-bar">
+    <div class="app-header-bar__panel">
+      <div class="app-header-bar__panel-logo-links">
+        <div class="app-header-bar__panel-logo">
+          <img class="app-header-bar__image" src="@/assets/app-header-bar/logo.png" alt="">
         </div>
-        <div class="header-bar__panel-links">
-          <div v-for="button in buttons" class="header-bar__panel-button">
-            <div class="header-bar__image mr" v-if="button.icons"><img :src="require(`@/${button.icons}`)" alt=""></div>
+        <div class="app-header-bar__panel-links">
+          <div v-for="button in buttons" class="app-header-bar__panel-button">
+            <div class="app-header-bar__image mr" v-if="button.icons"><img :src="require(`@/${button.icons}`)" alt=""></div>
             <div>{{ button.text }}</div>
           </div>
         </div>
       </div>
 
-      <div class="header-bar__panel-button">
-          <button class="header-bar__my-button">Разместить объявление</button>
+      <div class="app-header-bar__panel-button">
+          <button class="app-header-bar__my-button">Разместить объявление</button>
       </div>
     </div>
   </div>
@@ -32,18 +32,18 @@ let buttons = ref([
   {text: 'Ипотека', icons: ''},
   {text: 'Журнал', icons: ''},
   {text: 'Агенства', icons: ''},
-  {text: 'Срочный выкуп квартир', icons: 'assets/header-bar/building.png'},
+  {text: 'Срочный выкуп квартир', icons: 'assets/app-header-bar/building.png'},
 ])
 </script>
 
 <style scoped lang="scss">
-.header-bar__image {
+.app-header-bar__image {
   height: auto;
 }
 
 
 
-.header-bar {
+.app-header-bar {
   margin-bottom: 30px;
   display: flex;
   justify-content: center;
@@ -70,39 +70,27 @@ let buttons = ref([
   }
 
   &__panel-links {
+    font-size: 14px;
     display: flex;
   }
 
   &__panel-button {
     display: flex;
-    margin-right: 10px;
+    margin-right: 15px;
   }
 }
 
 
-.grid-test {
-  display: grid;
-  grid-template-columns: repeat(5, 20%);
 
 
-}
 
-.grid-item {
-  border: 1px solid;
-
-}
-
-.grid-pop {
-  background-color: red;
-
-}
-
-
-.header-bar__my-button {
+.app-header-bar__my-button {
+  color: white;
+  font-size: 14px;
   border: none;
   padding: 7px;
   background-color: #FF541E;
-  border-radius: 7px;
+  border-radius: 12px;
 }
 
 

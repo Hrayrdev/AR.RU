@@ -1,0 +1,23 @@
+1. account/ url Компонент account +
+font-size фикс +
+ отступы footer Пишите ...
+ бох-шадов убрать +
+ клопку загрущзить поправить +
+
+ header footer убрать в components папку переименовать в app-header app-footer +
+ создать папку Account в components и вынести все компоненты account- +
+ убрать инлайн стили
+ все классы начи
+ убратть header-info__nav__info  al-center img-auto header-info__nav__notification__reg-and-sign +
+ убрать коментарии +
+ папки assets в   account, app, +
+
+container / inner/ wrapper
+
+ mr mb убрать
+
+   <div class="update-account">
+ <!--    account-profile.-->
+
+ создать app-input app-button
+

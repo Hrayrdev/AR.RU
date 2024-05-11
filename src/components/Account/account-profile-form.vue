@@ -1,25 +1,26 @@
 <template>
-  <div class="update-account">
-    <div class="update-account__update-avatar mb">
-      <div class="update-account__avatar">
-        <div class="update-account__avatar-icon mr"><img class="img-auto" src="@/assets/account-list/avatar.png" alt="">
+  <div class="account-profile-form">
+    <div class="account-profile-form__update-avatar mb">
+      <div class="account-profile-form__avatar">
+        <div class="account-profile-form__avatar-icon mr"><img class="img-auto" src="@/assets/app-account-list/avatar.png" alt="">
         </div>
-        <div class="update-account__avatar-label">Аватар в формате jpg или png. Максимальный размер фалат до 10МБ</div>
+        <div class="account-profile-form__avatar-label">Аватар в формате jpg или png. Максимальный размер фалат до 10МБ</div>
       </div>
-      <button class="update-account__avatar-button">
-        <div class="update-account__avatar-button-icon"><img class="img-auto" src="@/assets/update-account/add.png"
-                                                             alt=""></div>
+      <button class="account-profile-form__avatar-button">
+        <div class="account-profile-form__avatar-button-icon">
+          <img class="img-auto" src="@/assets/app-update-account/add.png" alt="">
+        </div>
         <div>Загрузить фото</div>
       </button>
     </div>
 
-    <div class="update-account__update-data">
-      <input class="update-account__input mb" placeholder="Имя" type="">
-      <input class="update-account__input mb" placeholder="Фамилия" type="">
+    <div class="account-profile-form__update-data">
+      <input class="account-profile-form__input mb" placeholder="Имя" type="">
+      <input class="account-profile-form__input mb" placeholder="Фамилия" type="">
     </div>
 
     <div>
-      <button class="update-account__update-button">Сохранить изменения</button>
+      <button class="account-profile-form__update-button">Сохранить изменения</button>
     </div>
 
 
@@ -38,12 +39,10 @@
 $c-black: #030303;
 
 
-
-
-.update-account {
+.account-profile-form {
   margin-right: 30px;
   width: 672px;
-  padding: 24px ;
+  padding: 24px;
   border: 1px solid white;
   box-shadow: 3px 3px 3px 3px #d5d2d2;
   border-radius: 40px;
@@ -64,11 +63,13 @@ $c-black: #030303;
   }
 
   &__avatar-label {
+    font-size: 14px;
     width: 326px;
     color: rgba($c-black, 0.5);
   }
 
   &__avatar-button {
+    font-size: 14px;
     border: none;
     color: #ffffff;
     display: flex;
@@ -80,6 +81,7 @@ $c-black: #030303;
     cursor: pointer;
 
     &-icon {
+      display: flex;
       margin-right: 5px;
     }
   }
@@ -97,7 +99,9 @@ $c-black: #030303;
     border: 1px solid rgba($c-black, 0.2);
     border-radius: 10px;
   }
-  &__update-button{
+
+  &__update-button {
+    font-size: 14px;
     border: none;
     padding: 10px;
     border-radius: 7px;

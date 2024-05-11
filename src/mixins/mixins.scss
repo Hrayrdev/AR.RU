@@ -1,0 +1,11 @@
+$c-black: #030303;
+
+@mixin container {
+    max-width: 1360px;
+  }
+
+@mixin inner-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

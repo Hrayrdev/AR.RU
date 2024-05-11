@@ -1,13 +1,11 @@
 import { createRouter, createWebHistory } from 'vue-router'
-import NavigationInfoView from "@/views/HeaderInfo.vue";
-import ANRU from "@/views/Anru.vue";
-import Anru from "@/views/Anru.vue";
+import Account from "@/views/Account.vue";
 
 const routes = [
   {
-    path: '/',
-    name: 'Anru',
-    component: Anru
+    path: '/account',
+    name: 'account',
+    component: Account
   },
 
 
