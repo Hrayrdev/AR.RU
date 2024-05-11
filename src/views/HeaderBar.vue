@@ -3,7 +3,7 @@
     <div class="header-bar__panel">
       <div class="header-bar__panel-logo-links">
         <div class="header-bar__panel-logo">
-          <img class="header-bar__image" src="../components/HeaderBar-icons/logo.png" alt="">
+          <img class="header-bar__image" src="../assets/header-bar/logo.png" alt="">
         </div>
         <div class="header-bar__panel-links">
           <div v-for="button in buttons" class="header-bar__panel-button">
@@ -14,7 +14,7 @@
       </div>
 
       <div class="header-bar__panel-button">
-          <div class="header-bar__my-button">Разместить объявление</div>
+          <button class="header-bar__my-button">Разместить объявление</button>
       </div>
     </div>
   </div>
@@ -32,7 +32,7 @@ let buttons = ref([
   {text: 'Ипотека', icons: ''},
   {text: 'Журнал', icons: ''},
   {text: 'Агенства', icons: ''},
-  {text: 'Срочный выкуп квартир', icons: 'components/HeaderBar-icons/building.png'},
+  {text: 'Срочный выкуп квартир', icons: 'assets/header-bar/building.png'},
 ])
 </script>
 
@@ -41,11 +41,10 @@ let buttons = ref([
   height: auto;
 }
 
-.mr {
-  margin-right: 10px;
-}
+
 
 .header-bar {
+  margin-bottom: 30px;
   display: flex;
   justify-content: center;
 
@@ -100,6 +99,7 @@ let buttons = ref([
 
 
 .header-bar__my-button {
+  border: none;
   padding: 7px;
   background-color: #FF541E;
   border-radius: 7px;
