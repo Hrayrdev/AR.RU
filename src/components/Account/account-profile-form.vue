@@ -40,11 +40,11 @@ $c-black: #030303;
 
 
 .account-profile-form {
+  background-color: white;
   margin-right: 30px;
   width: 672px;
   padding: 24px;
   border: 1px solid white;
-  box-shadow: 3px 3px 3px 3px #d5d2d2;
   border-radius: 40px;
 
   &__update-avatar {

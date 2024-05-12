@@ -70,6 +70,7 @@ $c-black: #030303;
 }
 
 .app-footer {
+  background-color: white;
   padding: 20px 0 20px 0;
 
   &__info {

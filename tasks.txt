@@ -1,7 +1,15 @@
+
+container / inner/ wrapper
+
+
+
+
+
+
 1. account/ url Компонент account +
 font-size фикс +
  отступы footer Пишите ...
- бох-шадов убрать +
+ бох-шадов убрать
  клопку загрущзить поправить +
 
  header footer убрать в components папку переименовать в app-header app-footer +
@@ -12,7 +20,6 @@ font-size фикс +
  убрать коментарии +
  папки assets в   account, app, +
 
-container / inner/ wrapper
 
  mr mb убрать
 

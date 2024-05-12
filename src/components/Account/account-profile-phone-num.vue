@@ -22,6 +22,7 @@ $c-black: #030303;
 .account-profile-phone-num {
   padding: 12px;
   border-radius: 10px;
+  background-color: white;
 }
 
 .phone-info {

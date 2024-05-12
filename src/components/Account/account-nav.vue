@@ -1,29 +1,29 @@
 <template>
-  <div class="app-account-list mr">
-    <div class="app-account-list__my-account mb">
-      <div class="app-account-list__my-account-avatar mr"><img class="img-auto" src="@/assets/app-account-list/avatar.png"
-                                                           alt="">
+  <div class="account-nav ">
+    <div class="account-nav__user-info ">
+      <div class="account-nav__avatar-wrapper ">
+        <img class="account-nav__avatar"
+             src="@/assets/app-account-list/avatar.png"
+             alt="">
       </div>
-      <div class="app-account-list__my-account-data">
-        <div class="app-account-list__my-account-data-name">Имя Фамилия</div>
-        <div class="app-account-list__my-account-data-id">ID 9659669526</div>
+      <div class="account-nav__user-data">
+        <div class="account-nav__name">Имя Фамилия</div>
+        <div class="account-nav__id">ID 9659669526</div>
       </div>
     </div>
 
-    <div class="app-account-list__profile-list">
+    <div class="account-nav__list">
 
       <!--      #Todo вынести в отдельный компонент accountapp--nav-item -->
-      <div v-for="item in profileList" class="app-account-list__profile-list-item">
-        <div class="app-account-list__profile-list-icon"><img class="img-auto" :src="require(`@/${item.icon}`)" alt="">
-        </div>
-        <div class="app-account-list__profile-list-label">{{ item.label }}</div>
-      </div>
+      <account-nav-item :profile-list="profileList"/>
+
       <!--      #Todo вынести в отдельный компонент -->
     </div>
 
-    <div class="app-account-list__exit">
-      <div class="app-account-list__exit-icon"><img class="img-auto" src="@/assets/app-account-list/exit.png" alt=""></div>
-      <div class="app-account-list__exit-label">Выйти</div>
+    <div class="account-nav__exit">
+      <div class="account-nav__exit-icon"><img class="img-auto" src="@/assets/app-account-list/exit.png" alt="">
+      </div>
+      <div class="account-nav__exit-label">Выйти</div>
     </div>
 
   </div>
@@ -33,6 +33,7 @@
 <script setup>
 
 import {ref} from "vue";
+import AccountNavItem from "@/components/Account/account-nav-item.vue";
 
 const profileList = ref([
   {label: 'Сводка', icon: 'assets/app-account-list/summary.png'},
@@ -50,7 +51,7 @@ const profileList = ref([
 
 <style scoped lang="scss">
 $c-black: #030303;
-
+@import "@/mixins/mixins";
 @font-face {
   font-family: 'Semi Bold';
   src: url("@/assets/fonts/ofont.ru_Open Sans.ttf");
@@ -63,13 +64,15 @@ $c-black: #030303;
 }
 
 
-.app-account-list {
+.account-nav {
+  margin-right: 16px;
   padding: 20px;
   display: flex;
   flex-direction: column;
   align-items: center;
 
-  &__my-account {
+  &__user-info {
+    @include mb;
     display: flex;
     align-items: center;
     width: 250px;
@@ -77,23 +80,31 @@ $c-black: #030303;
 
   }
 
+  &__avatar-wrapper{
+  margin-right: 10px;
+
+  }
+
+
   &__my-account-avatar {
   }
 
-  &__my-account-data {
-    &-name {
-      font-size: 14px;
-      font-family: 'Semi Bold';
-    }
-
-    &-id {
-      font-size: 14px;
-      font-family: 'medium';
-      color: rgba($c-black, .6);
-    }
+  &__avatar{
+    width: 100%;
+    height: auto;
+  }
+  &__name {
+    font-size: 14px;
+    font-family: 'Semi Bold';
   }
 
-  &__profile-list {
+  &__id {
+    font-size: 14px;
+    font-family: 'medium';
+    color: rgba($c-black, .6);
+  }
+
+  &__list {
     border-bottom: 1px solid rgba($c-black, 0.1);
     width: 250px;
 
@@ -105,15 +116,11 @@ $c-black: #030303;
     &-label {
       font-size: 14px;
       color: rgba($c-black, .6);
-
     }
   }
 
   &__profile-list-item {
-    cursor: pointer;
 
-    display: flex;
-    margin-bottom: 5px;
   }
 
   &__exit {

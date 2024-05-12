@@ -16,6 +16,7 @@
 $c-black: #030303;
 
 .account-profile-mail {
+  background-color: white;
   padding: 12px;
   border-radius: 10px;
 }

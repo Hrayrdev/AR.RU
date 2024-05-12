@@ -32,6 +32,7 @@ import AccountNav from "@/components/Account/account-nav.vue";
 import AccountProfilePhoneNum from "@/components/Account/account-profile-phone-num.vue";
 import AccountProfileMail from "@/components/Account/account-profile-mail.vue";
 import AccountProfile from "@/components/Account/account-profile.vue";
+import {onMounted} from "vue";
 </script>
 
 
@@ -48,6 +49,7 @@ import AccountProfile from "@/components/Account/account-profile.vue";
 }
 
 .anru-page {
+  background-color: $c-white-back;
   height: 98vh;
   display: flex;
   align-items: center;
