@@ -7,6 +7,11 @@ const routes = [
     name: 'account',
     component: Account
   },
+  {
+    path: '/mobileTest',
+    name: 'mobileTest',
+    component: Account
+  },
 
 
 ]

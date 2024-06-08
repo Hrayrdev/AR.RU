@@ -1,42 +1,64 @@
 <template>
-  <div class="anru-page">
+  <div class="anru-page" v-if="width > 744">
     <div class="container">
       <app-header-info/>
       <HeaderBar/>
-      <div style="display:flex;">
+      <div class="account-data">
         <account-nav/>
-<account-profile/>
+        <account-profile/>
       </div>
     </div>
 
     <div class="footer-in-site">
-      <div style="width: 1360px;">
-        <app-footer/>
-      </div>
+      <app-footer/>
 
     </div>
-
   </div>
+
+  <div v-else class="anru-mobile-page">
+    <div>
+      <account-profile/>
+    </div>
+  </div>
+
+  <button @click="updateObj">owodwodwo</button>
+
 </template>
 <script setup>
 import '@/mixins/mixins.scss'
 
 import HeaderBar from "@/components/App/app-header-bar.vue";
-import AccountList from "@/components/Account/account-nav.vue";
-import UpdateAccount from "@/components/Account/account-profile-form.vue";
-import UpdateAccountPhoneNum from "@/components/Account/account-profile-phone-num.vue";
-import UpdateAccountMail from "@/components/Account/account-profile-mail.vue";
 import AppHeaderInfo from "@/components/App/app-header-info.vue";
 import AppFooter from "@/components/App/app-footer.vue";
 import AccountNav from "@/components/Account/account-nav.vue";
-import AccountProfilePhoneNum from "@/components/Account/account-profile-phone-num.vue";
-import AccountProfileMail from "@/components/Account/account-profile-mail.vue";
 import AccountProfile from "@/components/Account/account-profile.vue";
-import {onMounted} from "vue";
+import {computed, onMounted, reactive, watch, watchEffect} from "vue";
+import {createLogger, useStore} from "vuex";
+
+const store = useStore()
+store.commit('setWinWidth')
+store.commit('setWinHeight')
+const width = computed(() => {
+  return store.getters.getWidth
+})
+let testObject = reactive({
+  name: 0, id: 0
+})
+
+
+function updateObj() {
+  testObject.id++
+  testObject.name++
+}
+window.addEventListener('resize',(e)=> {
+  console.log(window.innerWidth)
+})
+
 </script>
 
 
 <style lang="scss">
+
 @import "@/mixins/mixins";
 
 .footer-in-site {
@@ -44,8 +66,8 @@ import {onMounted} from "vue";
   border-top: 1px solid rgba($c-black, .1)
 }
 
-.container {
-  @include container;
+.account-data {
+  display: flex;
 }
 
 .anru-page {
@@ -58,7 +80,8 @@ import {onMounted} from "vue";
 }
 
 .container {
-  max-width: 1360px;
+  @include container;
+
   display: flex;
   justify-content: center;
   flex-direction: column;

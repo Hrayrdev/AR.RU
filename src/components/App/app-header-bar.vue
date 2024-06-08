@@ -7,7 +7,7 @@
         </div>
         <div class="app-header-bar__panel-links">
           <div v-for="button in buttons" class="app-header-bar__panel-button">
-            <div class="app-header-bar__image mr" v-if="button.icons"><img :src="require(`@/${button.icons}`)" alt=""></div>
+            <div class="app-header-bar__image " v-if="button.icons"><img :src="require(`@/${button.icons}`)" alt=""></div>
             <div>{{ button.text }}</div>
           </div>
         </div>

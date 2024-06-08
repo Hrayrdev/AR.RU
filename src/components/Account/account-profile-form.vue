@@ -1,8 +1,8 @@
 <template>
   <div class="account-profile-form">
-    <div class="account-profile-form__update-avatar mb">
+    <div class="account-profile-form__update-avatar">
       <div class="account-profile-form__avatar">
-        <div class="account-profile-form__avatar-icon mr"><img class="img-auto" src="@/assets/app-account-list/avatar.png" alt="">
+        <div class="account-profile-form__avatar-icon"><img  src="@/assets/app-account-list/avatar.png" alt="">
         </div>
         <div class="account-profile-form__avatar-label">Аватар в формате jpg или png. Максимальный размер фалат до 10МБ</div>
       </div>
@@ -15,12 +15,12 @@
     </div>
 
     <div class="account-profile-form__update-data">
-      <input class="account-profile-form__input mb" placeholder="Имя" type="">
-      <input class="account-profile-form__input mb" placeholder="Фамилия" type="">
+      <input class="account-profile-form__input" placeholder="Имя" type="">
+      <input class="account-profile-form__input" placeholder="Фамилия" type="">
     </div>
 
     <div>
-      <button class="account-profile-form__update-button">Сохранить изменения</button>
+      <ui-button  :button-text="'Сохранить изменения'"/>
     </div>
 
 
@@ -32,6 +32,7 @@
 
 <script setup>
 
+import UiButton from "@/components/Ui/ui-button.vue";
 </script>
 
 
@@ -111,6 +112,10 @@ $c-black: #030303;
   }
 
 }
-
+@media (max-width: 744px)  {
+  .account-profile-form{
+    width: 600px;
+  }
+}
 
 </style>

@@ -3,12 +3,14 @@
   <div class="app-footer">
     <div class="app-footer__info">
       <div class="app-footer__info-about-us">
-        <div class="app-footer__info-about-us-logo">
+        <div class="app-footer__info-about-us-logo">//app-footer__info-logo заменимть
           <img class="img-auto" src="@/assets/app-footer/logo.png" alt="">
         </div>
-        <div class="app-footer__info-about-us-company">© 2006-2022 АН "PROНЕДВИЖИМОСТЬ"</div>
+        <div class="app-footer__info-about-us-company">© 2006-2022 АН "PROНЕДВИЖИМОСТЬ"</div>/app-footer__company заменимть
+      </div>
 
-        <div class="app-footer__info-links">
+      <div class="app-footer__info-links">
+        <div class="">
           <div class="site-info">Правила оплаты</div>
           <div class="site-info">Правила пользования сайтом</div>
           <div class="site-info">Политика конфиденциальности</div>
@@ -16,11 +18,11 @@
       </div>
 
       <div class="app-footer__info-links-and-contacts">
-        <div class="grey-text mb">Пишите</div>
+        <div class="app-footer__info-title ">Пишите</div>
         <div class="df">
 
           <div class="app-footer__info-contacts">
-            <div class="mr">
+            <div class="mr">/
               <div class="social-media-contact">
                 <div><img class="img-auto" src="@/assets/app-footer/mail.png" alt=""></div>
                 <div>Эл.почта</div>
@@ -43,15 +45,16 @@
           </div>
         </div>
       </div>
-      <div class="app-footer__info-phone-number">
-        <div class="grey-text">Звоните</div>
-        <div class="df">
+      <div class="app-footer__info-phone-number-wrapper">
+        <div class=" app-footer__info-title ">Звоните</div>
+        <div class="app-footer__info-phone-number">
           <div class="mr"><img src="@/assets/app-footer/phone.png" class="img-auto" alt=""></div>
           <div>+7 (495) 642-52-89</div>
         </div>
       </div>
     </div>
   </div>
+
 
 </template>
 
@@ -60,8 +63,8 @@
 
 </script>
 
-
 <style scoped lang="scss">
+
 
 $c-black: #030303;
 
@@ -72,11 +75,18 @@ $c-black: #030303;
 .app-footer {
   background-color: white;
   padding: 20px 0 20px 0;
+  display: flex;
+  justify-content: center;
 
   &__info {
+    width: 1360px;
     display: grid;
-    grid-template-columns: 1fr 2fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
 
+    &-title{
+      height: 50px;
+      color: rgba($c-black, .4);
+    }
 
     &-about-us {
       display: flex;
@@ -99,7 +109,6 @@ $c-black: #030303;
       display: flex;
       flex-direction: column;
       align-items: center;
-      justify-content: space-between;
     }
 
     &-about-site-and-contacts {
@@ -107,19 +116,26 @@ $c-black: #030303;
     }
 
     &-links {
-      margin-right: 100px;
+      display: flex;
+      align-items: flex-end;
+      justify-content: center;
     }
 
     &-contacts {
       display: flex;
     }
 
-    &-phone-number {
+    &-phone-number-wrapper {
       font-size: 14px;
       display: flex;
       flex-direction: column;
       align-items: center;
-      justify-content: space-between;
+    }
+
+    &-phone-number {
+      font-size: 16px;
+      font-weight: 1000;
+      display: flex;
     }
 
   }

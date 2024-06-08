@@ -49,15 +49,13 @@
 }
 
 .app-header-info {
-  padding-left: 10px;
-  padding-right: 13px;
-  display: flex;
+  padding-inline: 13px;
+
   justify-content: center;
   margin-bottom: 20px;
   &__nav {
-    width: 1360px;
-    display: flex;
-    justify-content: space-between;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
     &-info {
       display: flex;
     }
@@ -87,9 +85,8 @@
     }
 
     &-notification {
+      background-color: red;
       display: flex;
-      justify-content: space-between;
-      width: 280px;
     }
 
     &-notification-reg-and-sign {
