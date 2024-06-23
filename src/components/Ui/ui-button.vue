@@ -19,6 +19,8 @@ let props = defineProps({
 
 <style scoped lang="scss">
 .ui-button{
+  width: 100%;
+  height: 100%;
   font-size: 14px;
   border: none;
   padding: 10px;

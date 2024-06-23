@@ -1,19 +1,26 @@
 $c-black: #030303;
-$c-white-back: rgba(black,.057);
+$c-white-back: rgba(black, .057);
 @mixin container {
-    max-width: 1360px;
-  }
-
-@mixin mr{
+  max-width: 1360px;
+  margin: auto;
+  min-height: 100vh;
+}
+ .some {
+  background-color: red;
+}
+@mixin mr {
   margin-right: 10px;
 }
-@mixin mb{
+
+@mixin mb {
   margin-bottom: 10px;
 }
-@mixin img-auto{
+
+@mixin img-auto {
   width: 100%;
   height: auto;
 }
+
 @mixin inner-center {
   display: flex;
   justify-content: center;

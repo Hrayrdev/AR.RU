@@ -52,9 +52,11 @@ let buttons = ref([
     display: flex;
     justify-content: space-between;
     width: 1360px;
+    flex-wrap: wrap;
   }
 
   &__panel-logo-links {
+
     align-items: center;
     display: flex;
     justify-content: space-between;

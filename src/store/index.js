@@ -7,11 +7,11 @@ export default createStore({
     },
 
     mutations: {
-        setWinWidth(state) {
-            state.winWidth = window.innerWidth
+        setWinWidth(state, payload) {
+            state.winWidth = payload
         },
-        setWinHeight(state){
-            state.winHeight = window.innerHeight
+        setWinHeight(state, payload){
+            state.winHeight = payload
         }
     },
 

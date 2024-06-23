@@ -1,55 +1,64 @@
 <template>
 
   <div class="app-footer">
-    <div class="app-footer__info">
-      <div class="app-footer__info-about-us">
-        <div class="app-footer__info-about-us-logo">//app-footer__info-logo заменимть
-          <img class="img-auto" src="@/assets/app-footer/logo.png" alt="">
-        </div>
-        <div class="app-footer__info-about-us-company">© 2006-2022 АН "PROНЕДВИЖИМОСТЬ"</div>/app-footer__company заменимть
-      </div>
+    <div class="app-footer__inner">
 
-      <div class="app-footer__info-links">
-        <div class="">
-          <div class="site-info">Правила оплаты</div>
-          <div class="site-info">Правила пользования сайтом</div>
-          <div class="site-info">Политика конфиденциальности</div>
-        </div>
-      </div>
-
-      <div class="app-footer__info-links-and-contacts">
-        <div class="app-footer__info-title ">Пишите</div>
-        <div class="df">
-
-          <div class="app-footer__info-contacts">
-            <div class="mr">/
-              <div class="social-media-contact">
-                <div><img class="img-auto" src="@/assets/app-footer/mail.png" alt=""></div>
-                <div>Эл.почта</div>
-              </div>
-              <div class="social-media-contact">
-                <div><img class="img-auto" src="@/assets/app-footer/telegram.png" alt=""></div>
-                <div>Telegram</div>
-              </div>
+      <div class="app-footer__info">
+        <div class="app-footer__info-logo-wrapper">
+          <div class="app-footer__info-logo">
+            <div class="app-footer__info-logo-inner">
+              <img class="img-auto" src="@/assets/app-footer/logo.png" alt="">
             </div>
+            <div class="app-footer__info-company">© 2006-2022 АН "PROНЕДВИЖИМОСТЬ"</div>
+          </div>
+        </div>
+
+        <div class="app-footer__info-links">
+          <div class="">
+            <div class="site-info">Правила оплаты</div>
+            <div class="site-info">Правила пользования сайтом</div>
+            <div class="site-info">Политика конфиденциальности</div>
+          </div>
+        </div>
+
+        <div class="app-footer__info-links-and-contacts">
+          <div>
+            <div class="app-footer__info-title ">Пишите</div>
             <div>
-              <div class="social-media-contact">
-                <div><img class="img-auto" src="@/assets/app-footer/whatsapp.png" alt=""></div>
-                <div>Whatsapp</div>
-              </div>
-              <div class="social-media-contact">
-                <div><img class="img-auto" src="@/assets/app-footer/viber.png" alt=""></div>
-                <div>Viber</div>
+
+              <div class="app-footer__info-contacts">
+                <div>
+                  <div class="social-media-contact">
+                    <div><img class="img-auto" src="@/assets/app-footer/mail.png" alt=""></div>
+                    <div>Эл.почта</div>
+                  </div>
+                  <div class="social-media-contact">
+                    <div><img class="img-auto" src="@/assets/app-footer/telegram.png" alt=""></div>
+                    <div>Telegram</div>
+                  </div>
+                </div>
+                <div>
+                  <div class="social-media-contact">
+                    <div><img class="img-auto" src="@/assets/app-footer/whatsapp.png" alt=""></div>
+                    <div>Whatsapp</div>
+                  </div>
+                  <div class="social-media-contact">
+                    <div><img class="img-auto" src="@/assets/app-footer/viber.png" alt=""></div>
+                    <div>Viber</div>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
         </div>
-      </div>
-      <div class="app-footer__info-phone-number-wrapper">
-        <div class=" app-footer__info-title ">Звоните</div>
-        <div class="app-footer__info-phone-number">
-          <div class="mr"><img src="@/assets/app-footer/phone.png" class="img-auto" alt=""></div>
-          <div>+7 (495) 642-52-89</div>
+        <div class="app-footer__info-phone-number-wrapper">
+          <div>
+            <div class=" app-footer__info-title ">Звоните</div>
+            <div class="app-footer__info-phone-number">
+              <div class="mr"><img src="@/assets/app-footer/phone.png" class="img-auto" alt=""></div>
+              <div>+7 (495) 642-52-89</div>
+            </div>
+          </div>
         </div>
       </div>
     </div>
@@ -60,6 +69,7 @@
 
 
 <script setup>
+import '@/mixins/mixins.scss'
 
 </script>
 
@@ -73,42 +83,55 @@ $c-black: #030303;
 }
 
 .app-footer {
-  background-color: white;
-  padding: 20px 0 20px 0;
-  display: flex;
-  justify-content: center;
+  width: 100%;
+  &__inner {
+    margin: auto;
+    width: 100%;
+    max-width: 1360px;
+    padding: 20px 0 20px 0;
+    display: flex;
+    justify-content: center;
+
+  }
 
   &__info {
-    width: 1360px;
+    width: 100%;
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
 
-    &-title{
+
+    &-title {
+
+      padding-left: 1px;
+      font-size: 16px;
       height: 50px;
       color: rgba($c-black, .4);
     }
 
-    &-about-us {
+    &-logo {
       display: flex;
       flex-direction: column;
-      align-items: center;
+      justify-content: space-between;
+      height: 100%
+    }
 
-      &-logo {
-        width: 140px;
-        margin-bottom: 80px;
-      }
+    &-logo-wrapper {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      padding-bottom: 10px;
+
 
       &-company {
         font-size: 12px;
+
         color: rgba($c-black, .4);
       }
     }
 
     &-links-and-contacts {
-      font-size: 14px;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
+
     }
 
     &-about-site-and-contacts {
@@ -116,9 +139,10 @@ $c-black: #030303;
     }
 
     &-links {
+
       display: flex;
       align-items: flex-end;
-      justify-content: center;
+      justify-content: flex-start;
     }
 
     &-contacts {
@@ -143,6 +167,12 @@ $c-black: #030303;
 
 }
 
+.app-footer__info-company {
+  font-size: 12px;
+
+  color: rgba($c-black, .4);
+}
+
 .site-info {
   color: rgba($c-black, .4);
   margin-bottom: 10px;
@@ -151,6 +181,7 @@ $c-black: #030303;
 
 .social-media-contact {
   display: flex;
+  margin-right: 10px;
   margin-bottom: 16px;
   font-family: "Semi Bold";
 }

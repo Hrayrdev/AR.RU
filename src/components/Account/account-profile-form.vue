@@ -19,7 +19,7 @@
       <input class="account-profile-form__input" placeholder="Фамилия" type="">
     </div>
 
-    <div>
+    <div class="account-profile-form__save-button"  v-if="width >744">
       <ui-button  :button-text="'Сохранить изменения'"/>
     </div>
 
@@ -33,18 +33,26 @@
 <script setup>
 
 import UiButton from "@/components/Ui/ui-button.vue";
+import {computed} from "vue";
+import { useStore} from "vuex";
+
+const store = useStore()
+const width = computed(() => {
+  return store.getters.getWidth
+})
 </script>
 
 
 <style scoped lang="scss">
 $c-black: #030303;
 
-
+.account-profile-form__save-button{
+  width: 210px;
+}
 .account-profile-form {
   background-color: white;
   margin-right: 30px;
-  width: 672px;
-  padding: 24px;
+  width: 100%;
   border: 1px solid white;
   border-radius: 40px;
 
@@ -65,7 +73,7 @@ $c-black: #030303;
 
   &__avatar-label {
     font-size: 14px;
-    width: 326px;
+    width: 60%;
     color: rgba($c-black, 0.5);
   }
 
@@ -100,6 +108,9 @@ $c-black: #030303;
     border: 1px solid rgba($c-black, 0.2);
     border-radius: 10px;
   }
+  &__input:first-child{
+    margin-bottom: 12px;
+  }
 
   &__update-button {
     font-size: 14px;
@@ -114,8 +125,18 @@ $c-black: #030303;
 }
 @media (max-width: 744px)  {
   .account-profile-form{
-    width: 600px;
+    width: 100%;
+    border-radius: 0;
+    margin-right: 0;
   }
+  .account-profile-form__update-avatar{
+    margin-bottom: 24px;
+  }
+  .account-profile-form__input:first-child{
+    margin-bottom: 12px;
+  }
+
+
 }
 
 </style>

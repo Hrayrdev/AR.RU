@@ -1,8 +1,8 @@
 <template>
   <div class="account-profile-mail">
-    <div class="mail-status  ">Не подтверждена</div>
-    <div class="mail-info mb">Электронная почта</div>
-    <div class="mail mb ">
+    <div class="account-profile-mail-status  ">Не подтверждена</div>
+    <div class="account-profile-mail-info ">Электронная почта</div>
+    <div class="account-profile-mail-name mb ">
       <input class="mail-input" placeholder="user@yandex.ru">
     </div>
     <div class="account-profile-mail-button">Отправить ссылку для подтвеждения</div>
@@ -17,25 +17,28 @@ $c-black: #030303;
 
 .account-profile-mail {
   background-color: white;
-  padding: 12px;
-  border-radius: 10px;
+  border-radius: 20px;
+  padding: 24px;
+
 }
 
-.mail-status {
+.account-profile-mail-status {
   display: inline;
   padding: 5px;
   background-color: rgba($c-black, 0.1);
   border-radius: 20px;
   font-size: 12px;
+  margin-bottom: 10px;
 }
 
-.mail-info {
+.account-profile-mail-info {
+  margin-bottom: 10px;
   font-size: 14px;
-  margin-top: 10px;
   color: rgba($c-black, .6);
 }
 
-.mail {
+.account-profile-mail-name {
+  margin-bottom: 10px;
 }
 
 .mail-input {
@@ -49,4 +52,11 @@ $c-black: #030303;
   color: #FF541E;
   font-size: 14px;
 }
+
+@media (max-width: 744px) {
+  .account-profile-mail {
+    border-radius: 20px;
+  }
+}
+
 </style>

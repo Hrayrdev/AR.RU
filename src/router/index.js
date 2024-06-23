@@ -3,7 +3,7 @@ import Account from "@/views/Account.vue";
 
 const routes = [
   {
-    path: '/account',
+    path: '/account/profile',
     name: 'account',
     component: Account
   },
